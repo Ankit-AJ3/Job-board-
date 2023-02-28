@@ -5,7 +5,7 @@ import Home from './Home'
 const JOBS_KEY = 'jobs';
 
 function PostJob(props) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [location, setLocation] = useState('');
@@ -47,21 +47,28 @@ function PostJob(props) {
       <h2>Post a Job</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="title">Job Title</label>
+          <label htmlFor="title">Job Title  </label>
           <input type="text" id="title" value={title} onChange={handleTitleChange} />
         </div>
+        <br />
         <div>
-          <label htmlFor="date">Posting Date</label>
+          <label htmlFor="date">Posting Date </label>
           <input type="date" id="date" value={date} onChange={handleDateChange} />
         </div>
+        <br />
+
         <div>
           <label htmlFor="location">Job Location</label>
           <input type="text" id="location" value={location} onChange={handleLocationChange} />
         </div>
+        <br />
+
         <div>
           <label htmlFor="description">Job Description</label>
           <textarea id="description" value={description} onChange={handleDescriptionChange} />
         </div>
+        <br />
+
         <div>
           <label htmlFor="type">Job Type</label>
           <select id="type" value={type} onChange={handleTypeChange}>
@@ -71,6 +78,8 @@ function PostJob(props) {
             <option value="contract">Contract</option>
           </select>
         </div>
+        <br />
+
         <button type="submit">Post Job</button>
       </form>
     </div>
